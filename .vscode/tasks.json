@@ -10,21 +10,11 @@
       },
       "dependsOn": [
         "Api",
+        "Api: Tests",
         "Website",
+        "Website: Tests",
       ],
       "problemMatcher": []
-    },
-    {
-      "label": "Website",
-      "icon": {
-        "color": "terminal.ansiYellow",
-        "id": "keyboard"
-      },
-      "type": "npm",
-      "script": "start",
-      "path": "web/",
-      // "detail": "yarn start",
-      "group": "build"
     },
     {
       "label": "Api",
@@ -35,7 +25,39 @@
       "type": "npm",
       "script": "start",
       "path": "api/",
-      // "detail": "yarn start",
+      "group": "build"
+    },
+    {
+      "label": "Api: Tests",
+      "icon": {
+        "color": "terminal.ansiGreen",
+        "id": "server"
+      },
+      "type": "npm",
+      "script": "test-watch",
+      "path": "api/",
+      "group": "build"
+    },
+    {
+      "label": "Website",
+      "icon": {
+        "color": "terminal.ansiYellow",
+        "id": "keyboard"
+      },
+      "type": "npm",
+      "script": "start",
+      "path": "web/",
+      "group": "build"
+    },
+    {
+      "label": "Website: Tests",
+      "icon": {
+        "color": "terminal.ansiYellow",
+        "id": "keyboard"
+      },
+      "type": "npm",
+      "script": "test",
+      "path": "web/",
       "group": "build"
     },
   ]
