@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "reveal": "always",
+  "focus": false,
+  "tasks": [
+    {
+      "label": "Run All",
+      "group": {
+        "kind": "build"
+      },
+      "dependsOn": [
+        "Api",
+        "Website",
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Website",
+      "icon": {
+        "color": "terminal.ansiYellow",
+        "id": "keyboard"
+      },
+      "type": "npm",
+      "script": "start",
+      "path": "web/",
+      // "detail": "yarn start",
+      "group": "build"
+    },
+    {
+      "label": "Api",
+      "icon": {
+        "color": "terminal.ansiGreen",
+        "id": "server"
+      },
+      "type": "npm",
+      "script": "start",
+      "path": "api/",
+      // "detail": "yarn start",
+      "group": "build"
+    },
+  ]
+}
