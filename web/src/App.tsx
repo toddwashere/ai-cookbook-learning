@@ -1,6 +1,6 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { OpenAiChatterBox } from './examples/OpenAiChatterBox';
 
 function App() {
   return (
@@ -18,6 +18,9 @@ function App() {
         >
           Learn React
         </a>
+
+        <OpenAiChatterBox />
+
       </header>
     </div>
   );
