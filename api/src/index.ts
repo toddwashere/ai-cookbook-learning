@@ -1,6 +1,7 @@
 import express from 'express';
 import * as dotenv from "dotenv";
 import { OpenAiProvider } from './openai/OpenAiProvider';
+import { LlamaRoutes } from './llamaSelfHost/LlamaRoutes';
 
 dotenv.config()
 
@@ -16,6 +17,8 @@ const corsConfig = {
 };
 app.use(cors(corsConfig))
 app.use(express.json());
+
+LlamaRoutes(app);
 
 app.get('/', (req, res) => {
    res.send('The API is working!');
