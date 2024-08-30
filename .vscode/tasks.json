@@ -9,15 +9,15 @@
         "kind": "build"
       },
       "dependsOn": [
-        "Api",
-        "Api: Tests",
-        "Website",
-        "Website: Tests",
+        "Api (Server Side)",
+        // "Api: Tests",
+        "Website (Client Side)",
+        // "Website: Tests",
       ],
       "problemMatcher": []
     },
     {
-      "label": "Api",
+      "label": "Api (Server Side)",
       "icon": {
         "color": "terminal.ansiGreen",
         "id": "server"
@@ -27,19 +27,19 @@
       "path": "api/",
       "group": "build"
     },
+    // {
+    //   "label": "Api: Tests",
+    //   "icon": {
+    //     "color": "terminal.ansiGreen",
+    //     "id": "server"
+    //   },
+    //   "type": "npm",
+    //   "script": "test-watch",
+    //   "path": "api/",
+    //   "group": "build"
+    // },
     {
-      "label": "Api: Tests",
-      "icon": {
-        "color": "terminal.ansiGreen",
-        "id": "server"
-      },
-      "type": "npm",
-      "script": "test-watch",
-      "path": "api/",
-      "group": "build"
-    },
-    {
-      "label": "Website",
+      "label": "Website (Client Side)",
       "icon": {
         "color": "terminal.ansiYellow",
         "id": "keyboard"
@@ -49,16 +49,16 @@
       "path": "web/",
       "group": "build"
     },
-    {
-      "label": "Website: Tests",
-      "icon": {
-        "color": "terminal.ansiYellow",
-        "id": "keyboard"
-      },
-      "type": "npm",
-      "script": "test",
-      "path": "web/",
-      "group": "build"
-    },
+    // {
+    //   "label": "Website: Tests",
+    //   "icon": {
+    //     "color": "terminal.ansiYellow",
+    //     "id": "keyboard"
+    //   },
+    //   "type": "npm",
+    //   "script": "test",
+    //   "path": "web/",
+    //   "group": "build"
+    // },
   ]
 }
