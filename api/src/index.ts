@@ -1,7 +1,11 @@
 import express from 'express';
 import * as dotenv from "dotenv";
-import { OpenAiProvider } from './openai/OpenAiProvider';
-import { LlamaRoutes } from './llamaSelfHost/LlamaRoutes';
+import { BasicOpenAiRoutes } from './examples/1-basicsOpenAi';
+import { RedactPiiRoutes } from './examples/2-redactPii';
+import { ScrapeUrlRoutes } from './examples/3-scrapingUrl';
+import { OllamaRoutes } from './examples/4-ollamaSelfHost';
+import { ToolCallingRoutes } from './examples/5-callingToolsAndFunctions';
+
 
 dotenv.config()
 
@@ -18,24 +22,16 @@ const corsConfig = {
 app.use(cors(corsConfig))
 app.use(express.json());
 
-LlamaRoutes(app);
+BasicOpenAiRoutes(app);
+RedactPiiRoutes(app);
+ScrapeUrlRoutes(app);
+OllamaRoutes(app);
+ToolCallingRoutes(app);
+
 
 app.get('/', (req, res) => {
    res.send('The API is working!');
 });
-
-
-app.post('/chatWithARealPerson', async (req, res) => {
-   const myBody = req.body;
-   if (!myBody) {
-      res.status(400).send('No body provided');
-      return;
-   }
-   const results = await OpenAiProvider.makeAiCall(req.body.prompt);
-   res.send(results);
-});
-
-
 
 app.listen(port, () => {
    console.log(`Server running on http://localhost:${port}`);
