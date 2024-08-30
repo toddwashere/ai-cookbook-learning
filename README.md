@@ -1,6 +1,6 @@
-# ai-cookbook-learning
+# Javascript AI Cookbook: Building AI powered product features in JavaScript
 
-A few examples of how to use Gpt4, Lllama and other models via Javascript.
+This repo contains some of the examples I shared while giving a talk at the UtahJS conference, which includes how to use Gpt4, Llama and other models via Javascript.
 
 You can go straight to the examples here:
 
